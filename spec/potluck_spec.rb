@@ -14,5 +14,13 @@ RSpec.describe Potluck do
       expect(@potluck).to be_a(Potluck)
     end
 
+    it 'has a date' do
+      expect(@potluck.date).to eq("7-13-18")
+    end
+
+    it 'starts without dishes' do
+      expect(@potluck.dishes).to eq([])
+    end
+
   end
 end
