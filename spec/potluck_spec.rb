@@ -22,5 +22,19 @@ RSpec.describe Potluck do
       expect(@potluck.dishes).to eq([])
     end
 
+    it 'can have dishes' do
+      @potluck.add_dish(@couscous_salad)
+      @potluck.add_dish(@cocktail_meatballs)
+
+      expect(@potluck.dishes).to eq([@couscous_salad, @cocktail_meatballs])
+    end
+
+    it 'counts dishes' do
+      @potluck.add_dish(@couscous_salad)
+      @potluck.add_dish(@cocktail_meatballs)
+
+      expect(@potluck.dishes.length).to eq(2)
+    end
+
   end
 end
